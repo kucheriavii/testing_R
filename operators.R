@@ -18,5 +18,13 @@ head(auction.data)
 auction <- read.csv("c:\\data_science\\R\\R\\Salaries.csv")
 View(auction)
 
-x <- auction[auction$Year == 2012 & auction$TotalPay > 360000,]
+x <- auction[auction$Year == 2012 & auction$TotalPay > 300000,]
 x$JobTitle
+
+x <- 1:100
+x
+
+a = 50L #Щоб створити integer використовуй L
+typeof(a)
+b = 50 #створить double
+typeof(b)
