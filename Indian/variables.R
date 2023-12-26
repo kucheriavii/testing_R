@@ -18,3 +18,6 @@ x <- 100
 typeof(x)
 y <- 100L #літера L перетворює в integer
 typeof(y)
+
+a = TRUE
+a

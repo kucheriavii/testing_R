@@ -28,3 +28,10 @@ a = 50L #Щоб створити integer використовуй L
 typeof(a)
 b = 50 #створить double
 typeof(b)
+
+v1 <- c(1,2,3,4,5)
+class(v1)
+typeof(v1)
+
+v2<-c('hello', 'world')
+v2
