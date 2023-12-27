@@ -19,4 +19,19 @@ cars_rec <- filter(cars, cylinders == 4 | cylinders == 6)
 
 cars_in <- filter(cars, cylinders %in% c(3:5))
 
-filter(cars, str_detect(model, "Audi"))
+filter(cars, str_detect(model, "Audi|Acura"))
+
+#slice
+
+slice(cars,8:10) #з 8 по 10
+slice(cars, 100,5,10) #тільки 100,5 та 10
+slice(cars, -1, -3, -5) #Всі, окрім 1,3 та 5
+
+slice_max(cars, cylinders)
+slice_min(cars, cylinders)
+slice_sample(cars, n=10) #return random elements
+slice_sample(cars, n=10, replace=TRUE) #return random elements can elements be repeated 
+
+slice_sample(filter(cars, transmission=='Manual', cylinders == 12), n=30, replace = TRUE)
+
+head(cars, 10)
