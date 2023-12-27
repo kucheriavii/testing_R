@@ -48,3 +48,25 @@ typeof(one_int)
 ####################################################################
 
 is.double(math_1)
+is.integer(4L)
+
+char1 <- "hello"
+
+char2 <- "hello"
+
+char3 <- 'he\'llo'
+char3
+####################################################################
+t <- TRUE
+f <-  FALSE
+####################################################################
+
+birth_year <- c(2001, 2003, 2002)
+typeof(birth_year)
+class(birth_year)
+is.vector(birth_year)
+
+hello <-  c('Hello', 'world')
+hello
+
+bool <-  c(TRUE, FALSE, TRUE)
