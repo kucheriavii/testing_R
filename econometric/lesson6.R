@@ -35,3 +35,44 @@ slice_sample(cars, n=10, replace=TRUE) #return random elements can elements be r
 slice_sample(filter(cars, transmission=='Manual', cylinders == 12), n=30, replace = TRUE)
 
 head(cars, 10)
+
+sort(sqrt(abs(sin(1:10))))
+
+#PIPE передає аргумент в наступну функцію (аналог sort(sqrt(abs(sin(1:10)))))
+##################################
+1:10 %>% sin() %>%
+  abs() %>% 
+  sqrt() %>% sort()
+
+filter(cars, transmission=='Manual', cylinders == 12) %>% 
+  slice_sample(.data = ., n = 2) #крапка . показує куди вставляти дані
+
+#сортування даних
+#############################################
+cars %>% 
+  filter(transmission=='Manual') %>% 
+  slice_sample(n = 10) %>%
+  arrange(model_index)
+
+cars %>% 
+  filter(transmission=='Manual') %>% 
+  slice_sample(n = 10) %>%
+  arrange(desc(model_index))
+  
+
+cars %>% 
+  filter(transmission=='Manual') %>% 
+  slice_sample(n = 10) %>%
+  arrange(-model_index)
+
+cars %>% 
+  arrange(cylinders, model)   #сортування за двома параметрами
+
+
+# відбір стовбчиків
+########################################
+cars %>% 
+  select(model, transmission)
+
+cars %>% 
+  select(!c(model, transmission)) #виключити колонки з вибірки
