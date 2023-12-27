@@ -70,3 +70,28 @@ hello <-  c('Hello', 'world')
 hello
 
 bool <-  c(TRUE, FALSE, TRUE)
+
+from_five <- -5:5
+
+from_six <-  6:-3
+
+seq(1,100,2)
+
+seq(from=1,to=100,by=2)
+seq(0,100, length.out = 11)
+
+rep(1:3,5)
+rep(1:3,1:3)
+
+c(from_five, from_six)
+
+c(15, "!")
+1:2+1:3
+
+####################################################################
+myMatrix <- matrix(data=1:16, nrow=4, byrow = TRUE)
+myMatrix[3,3]
+
+myMatrix2 <- matrix(data=1:16, nrow=4, byrow = TRUE, dimnames = list(c("col1","col2","col3","col4"),
+                                                                     c("row1","row2","row3","row14")))
+myMatrix2
