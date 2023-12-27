@@ -60,5 +60,7 @@ install.packages("tidyverse")
 
 library(tidyverse)
 
+install.packages("devtools")
 
+devtools::install_github("yihui/xaringan")
 
