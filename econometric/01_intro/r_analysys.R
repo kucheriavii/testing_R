@@ -1,5 +1,6 @@
 library(dplyr)
 library(pacman)
+library(tidyverse)
 str(iris)
 bind_rows(iris, iris)
 iris_tbl <- as_tibble(iris)

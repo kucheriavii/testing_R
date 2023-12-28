@@ -76,3 +76,30 @@ cars %>%
 
 cars %>% 
   select(!c(model, transmission)) #виключити колонки з вибірки
+
+cars %>%
+    select(starts_with('m'))
+
+cars %>% 
+  select(ends_with('s'))
+
+cars %>% 
+  select(contains('ode'))
+
+cars %>% 
+  select(matches('[abcdefl]_'))
+
+cars %>% 
+  select(where(is.character))
+
+cars %>% 
+  select(where(is.numeric))
+
+a <- cars %>% 
+  select(where(is.character), everything()) #спочатку символьні, далі всі інші
+
+cars %>% 
+  relocate(transmission, .before=model) #поміняти стовбці місцями
+
+cars %>% 
+  relocate(model, .after=model_index) #поміняти стовбці місцями
