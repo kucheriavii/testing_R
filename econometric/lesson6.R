@@ -103,3 +103,29 @@ cars %>%
 
 cars %>% 
   relocate(model, .after=model_index) #поміняти стовбці місцями
+
+cars %>% 
+  relocate(contains("_"), .after=model)
+
+cars %>% 
+  rename(id = model_index,
+         "max ethanol" = max_ethanol) %>% 
+  select("max ethanol")
+
+cars %>% 
+  rename_with(toupper) #columns to uppercaase
+
+cars %>% 
+  rename_with(toupper, starts_with('m')) #columns which starts with 's' to uppercaase
+
+cars_rename <- cars %>% 
+  rename('max ethanol'=max_ethanol, 
+         'model index'=model_index)
+cars_rename
+
+cars_rename %>% 
+  rename_with(~gsub(' ', '_', .x))
+
+cars_rename %>% 
+  set_names(names(.) %>% str_replace(' ', '_') %>% str_to_title())
+
