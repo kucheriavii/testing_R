@@ -129,3 +129,32 @@ cars_rename %>%
 cars_rename %>% 
   set_names(names(.) %>% str_replace(' ', '_') %>% str_to_title())
 
+#mutate
+cars %>% 
+  mutate(disp_to_cyl = displacement/cylinders, .after=model)
+
+cars %>% 
+  mutate(disp_to_cyl = displacement/cylinders, .after=model)
+
+#groupby + summarise
+
+cars %>% 
+  group_by(transmission) %>% 
+  summarise(avg_mpg = mean(mpg))
+
+
+#count
+cars %>% 
+  group_by(transmission) %>% 
+  summarise(cars_count = n())
+
+cars %>% count(transmission, sort=TRUE)
+
+#case_When
+
+cars %>% 
+  transmute(model, mpg, mpg_group = case_when(
+    mpg>35 ~ 'econom',
+    mpg>20 ~ 'mid',
+    TRUE ~ 'hight'
+  ))
