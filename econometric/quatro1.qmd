@@ -24,4 +24,52 @@ Equals^1^
 ## Рисунки і посилання
 
 [Посилання](http://www.google.com) на документацію
-![](https://d29g4g2dyqv443.cloudfront.net/sites/default/files/hpc-cuda-how-to-cuda-python-2c50-d%402x_0.png)
+![test](https://d29g4g2dyqv443.cloudfront.net/sites/default/files/hpc-cuda-how-to-cuda-python-2c50-d%402x_0.png){#fig-test width=40%}
+
+# Списки
+
+* list 1
+  * underlist
+  * underlist 2
+  - test
+  - test 2
+* list 2
+* list 3
+
+1. list 1
+    a. underlist
+    a. underlist 2
+    b. test
+    c. test 2
+2. list 2
+3. list 3
+
+(@) list
+
+lorem ipsum
+
+(2) list 2
+
+```{r}
+#| include: false
+radius <- 10
+
+circkle_area <- round(pi * radius^2,2)
+circkle_area
+```
+
+# python
+### variant 1
+
+При радіусі кола `r radius`, площа кола - `r circkle_area`
+
+```{mermaid}
+flowchart LR
+  A[square] --> B{round}
+  B --> C(SLOWE)
+  B --> D[Result]
+```
+
+## Video
+
+{{< video https://youtu.be/XmyptCPtuzc?si=1xJerUnHDubma_EJ >}}
