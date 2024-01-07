@@ -58,10 +58,4 @@ plot(net,
      vertex.size = 2,
      edge.arrow.size = 0.1,
      vertex.label.cex = 0.8)
-
-plot(net,
-     vertex.color = rainbow(52),
-     vertex.size = V(net)$degree*0.4,
-     edge.arrow.size = 0.1,
-     layout=layout.fruchterman.reingold)
      
